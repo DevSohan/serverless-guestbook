@@ -14,12 +14,14 @@ const guestbook = {
   // add a single guestbood entry
   add(name, email, comment) {
     console.log('Sending', name, email, comment)
-    headers.append('Access-Control-Allow-Origin', apiUrl);
-    headers.append('Access-Control-Allow-Credentials', 'true');
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/save-guestbook-entry-sequence.json`,
       contentType: 'application/json; charset=utf-8',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type':'application/json; charset=utf-8'
+        },
       data: JSON.stringify({
         name,
         email,
