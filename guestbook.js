@@ -19,7 +19,7 @@ const guestbook = {
       url: `${apiUrl}/save-guestbook-entry-sequence.json`,
       contentType: 'application/json; charset=utf-8',
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': 'http://serverless-guestbook1-sn-labs-sohandot.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud/',
         'Content-Type':'application/json; charset=utf-8'
         },
       data: JSON.stringify({
