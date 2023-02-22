@@ -18,10 +18,6 @@ const guestbook = {
       type: 'PUT',
       url: `${apiUrl}/save-guestbook-entry-sequence.json`,
       contentType: 'application/json; charset=utf-8',
-      headers: {
-        'Access-Control-Allow-Origin': 'https://us-south.functions.appdomain.cloud/api/v1/web/652905aa-bd09-4807-ba4a-838367dff126/guestbook2',
-        'Content-Type':'application/json; charset=utf-8'
-        },
       data: JSON.stringify({
         name,
         email,
