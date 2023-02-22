@@ -14,6 +14,8 @@ const guestbook = {
   // add a single guestbood entry
   add(name, email, comment) {
     console.log('Sending', name, email, comment)
+    headers.append('Access-Control-Allow-Origin', apiUrl);
+    headers.append('Access-Control-Allow-Credentials', 'true');
     return $.ajax({
       type: 'PUT',
       url: `${apiUrl}/save-guestbook-entry-sequence.json`,
